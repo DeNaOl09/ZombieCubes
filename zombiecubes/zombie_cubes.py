@@ -162,13 +162,13 @@ enemies = []
 for y in range(len(map)):
     for x in range(len(map[y])):
         if map[y][x] == '*':
-            object = Object(x*100, y*100, pg.image.load('floor.png'), 0)
+            object = Object(x * 100, y * 100, pg.image.load('floor.png'), 0)
             objects.append(object)
         elif map[y][x] == 't':
-            object = Object(x*100, y*100, pg.image.load('terrain.png'), 0)
+            object = Object(x * 100, y * 100, pg.image.load('terrain.png'), 0)
             objects.append(object)
         elif map[y][x] == '#':
-            object = Object(x*100, y*100, pg.image.load('wall.png'), 1)
+            object = Object(x * 100, y * 100, pg.image.load('wall.png'), 1)
             objects.append(object)
 
 
@@ -204,7 +204,7 @@ while game:
 
     if len(enemies) < 20:
         for i in range(20 - len(enemies)):
-            enemy = Enemy(pg.image.load('zombie.png'), random.randint(200, 4000-200), random.randint(200, 3200-200))
+            enemy = Enemy(pg.image.load('zombie.png'), random.randint(200, 4000 - 200), random.randint(200, 3200 - 200))
             enemies.append(enemy)
 
     playerx = player.rect.x // 100
